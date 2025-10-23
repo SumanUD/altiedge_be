@@ -6,6 +6,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\PageCMSController;
+use App\Http\Controllers\FaqController;
+
 
 
 
@@ -33,7 +36,10 @@ Route::middleware('auth')->group(function () {
     
     
     Route::get('/admin/enrollments', [EnrollmentController::class, 'index'])->name('enrollments.index');
-
+    
+    Route::get('/admin/pages/{page_name}', [PageCMSController::class, 'edit'])->name('pages.edit');
+    
+    Route::resource('faqs', FaqController::class);
 });
 
 

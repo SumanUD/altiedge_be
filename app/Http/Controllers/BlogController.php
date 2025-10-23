@@ -82,8 +82,16 @@ class BlogController extends Controller
     }
 
     // API endpoint for Next.js frontend
-    public function apiIndex()
+    public function apiIndex($id = null)
     {
+        if ($id) {
+            $blog = Blog::find($id);
+            if (!$blog) {
+                return response()->json(['message' => 'Blog not found'], 404);
+            }
+            return response()->json($blog);
+        }
+
         $blogs = Blog::latest()->get();
         return response()->json($blogs);
     }

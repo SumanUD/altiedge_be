@@ -257,7 +257,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -299,50 +299,72 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
+
         [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
-    [
-        'type' => 'sidebar-menu-item',
-        'text' => 'Blogs',
-        'route' => 'blogs.index', // Resource route index
-        'icon' => 'fas fa-blog',
-    ],
-    [
-        'type' => 'sidebar-menu-item',
-        'text' => 'Contacts',
-        'route' => 'contacts.index',
-        'icon' => 'fas fa-address-book',
-    ],
-    [
-        'type' => 'sidebar-menu-item',
-        'text' => 'Events',
-        'route' => 'events.index', // Resource route index
-        'icon' => 'fas fa-calendar-alt',
-    ],
-    [
-        'type' => 'sidebar-menu-item',
-        'text' => 'Programs',
-        'route' => 'programs.index', // Resource route index
-        'icon' => 'fas fa-graduation-cap',
-    ],
-    [
-        'type' => 'sidebar-menu-item',
-        'text' => 'Enrollments',
-        'route' => 'enrollments.index',
-        'icon' => 'fas fa-clipboard-list',
-    ],
 
-      
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Homepage',
+            'url' => '/admin/pages/home',
+            'icon' => 'fas fa-home',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'About Us Page',
+            'url' => '/admin/pages/about',
+            'icon' => 'fas fa-users',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'ART Page',
+            'url' => '/admin/pages/art',
+            'icon' => 'fas fa-paint-brush',
+        ],
+
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'FAQs',
+            'route' => 'faqs.index',
+            'icon' => 'fas fa-question-circle',
+        ],
+
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Blogs',
+            'route' => 'blogs.index', // Resource route index
+            'icon' => 'fas fa-blog',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Contacts',
+            'route' => 'contacts.index',
+            'icon' => 'fas fa-address-book',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Events',
+            'route' => 'events.index', // Resource route index
+            'icon' => 'fas fa-calendar-alt',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Programs',
+            'route' => 'programs.index', // Resource route index
+            'icon' => 'fas fa-graduation-cap',
+        ],
+        [
+            'type' => 'sidebar-menu-item',
+            'text' => 'Enrollments',
+            'route' => 'enrollments.index',
+            'icon' => 'fas fa-clipboard-list',
+        ],
+
+
     ],
 
     /*
